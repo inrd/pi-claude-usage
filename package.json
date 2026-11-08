@@ -1,0 +1,37 @@
+{
+  "name": "pi-claude-usage",
+  "version": "0.1.0",
+  "description": "Pi extension: show Claude subscription usage (5h session + weekly limits) in the footer",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "claude",
+    "usage"
+  ],
+  "author": "Thomas Hennebert",
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "check": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.5.0",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/claude-usage.ts"
+    ]
+  }
+}
